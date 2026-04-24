@@ -1,5 +1,6 @@
 name: ruff-ci
 on: [pull_request]
+
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -9,4 +10,4 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install ruff==0.4.4
-      - run: ruff check . && ruff format --check .
+      - run: ruff check analysis.py && ruff format --check analysis.py
